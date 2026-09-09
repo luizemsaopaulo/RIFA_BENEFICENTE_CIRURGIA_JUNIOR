@@ -1,0 +1,116 @@
+RELATÓRIO FINAL — RIFA BENEFICENTE DO JÚNIOR
+QUANTIDADE CONFIGURÁVEL + PIX + DINHEIRO + INFINITEPAY
+==========================================================================
+
+CONFIGURAÇÃO
+- Valor por número: R$ 10,00
+- Meta da cirurgia: R$ 10.000,00
+- Quantidade: configurável pelo Admin e salva no Supabase
+- Admin: junior@gmail.com
+- InfinitePay: $antonio-junior-zzc
+- Edge separada: junior-infinitepay-gateway
+- Mesma instância Supabase, objetos/dados separados por prefixo junior_
+
+CHROMIUM — MOBILE 390x844 E DESKTOP 1366x900
+[OK] Grade pública com 100 números
+[OK] Anúncio automático de 100 números
+[OK] Faixa 001 a 100
+[OK] Potencial R$ 1.000,00
+[OK] Página 100 sem erro JS
+[OK] Grade pública com 300 números
+[OK] Anúncio automático de 300 números
+[OK] Faixa 001 a 300
+[OK] Potencial R$ 3.000,00
+[OK] Página 300 sem erro JS
+[OK] Grade pública com 1.000 números
+[OK] Anúncio automático de 1.000 números
+[OK] Faixa 0001 a 1000
+[OK] Potencial R$ 10.000,00
+[OK] Página 1000 sem erro JS
+[OK] Seleção múltipla e cálculo de total
+[OK] Checkout InfinitePay simulado
+[OK] Telefone com +55 normalizado
+[OK] Redirecionamento InfinitePay simulado
+[OK] 55 não duplicado
+[OK] Confirmação automática InfinitePay simulada
+[OK] Pix pessoal criado em simulação
+[OK] Telefone sem 55 normalizado
+[OK] Pix permanece Pendente
+[OK] Chave Pix copiada
+[OK] Pix abriu WhatsApp
+[OK] Dinheiro registrado
+[OK] Telefone de quem recebeu normalizado
+[OK] Admin com 100
+[OK] Admin faixa 001 a 100
+[OK] Doação adicionada
+[OK] Doação excluída
+[OK] Aumento 100→300
+[OK] Admin faixa 001 a 300
+[OK] Aumento 300→1000
+[OK] Admin faixa 0001 a 1000
+[OK] Redução insegura bloqueada
+[OK] Redução segura aceita
+[OK] Teste de sorteio só entre pagos
+[OK] Sorteio oficial simulado só entre pagos
+[OK] Admin sem erro JS
+[OK] Painel Rápido total 300
+[OK] Painel Rápido faixa 001 a 300
+[OK] Painel Rápido pendentes
+[OK] Painel Rápido potencial R$ 3.000,00
+[OK] Badge Confirmar
+[OK] Badge WhatsApp
+[OK] Painel Rápido sem erro JS
+
+VALIDAÇÕES ESTÁTICAS
+[OK] node_check_js/config.js
+[OK] node_check_js/app.js
+[OK] node_check_js/admin.js
+[OK] node_check_js/rapido.js
+[OK] node_check_admin-sw.js
+[OK] node_check_rapido-sw.js
+[OK] typescript_syntax_edge
+[OK] manifest_admin.webmanifest
+[OK] manifest_rapido.webmanifest
+[OK] admin_email_junior
+[OK] infinitepay_handle_junior
+[OK] edge_function_separada
+[OK] session_admin_separada
+[OK] quantidade_rpc_frontend
+[OK] quantidade_rpc_sql_full
+[OK] quantidade_rpc_sql_upgrade
+[OK] reserva_usa_total_dinamico
+[OK] reducao_segura
+[OK] sorteio_so_pago
+[OK] tabelas_junior_separadas
+[OK] sem_tabela_generica_de_outra_rifa
+[OK] sem_service_role_frontend
+[OK] service_role_so_edge_secret
+[OK] pix_copiar_whatsapp
+[OK] telefone_normalizado
+[OK] sem_limite_fixo_funcional_1000
+
+PWA
+[OK] Manifestos Admin/Painel Rápido em modo standalone
+[OK] Ícones e start_url presentes
+[OK] Service workers sem erro de sintaxe
+[OBS] A instalação do PWA no sistema operacional não foi acionada dentro do sandbox; manifest, SW e fluxo de instalação foram validados.
+
+SUPABASE / SQL
+[OK] SQL de instalação nova
+[OK] SQL de atualização da versão já instalada
+[OK] Quantidade sem limite fixo funcional de 1.000
+[OK] Aumento cria faixa adicional
+[OK] Redução bloqueia números ocupados acima do limite
+[OK] Reservas não são apagadas automaticamente
+[OK] Sorteio somente entre números Pagos da faixa atual
+[OK] Objetos exclusivos junior_ no mesmo projeto Supabase
+
+PAGAMENTOS
+[OK] InfinitePay do Júnior configurada com handle antonio-junior-zzc
+[OK] Pix pessoal / copiar chave / WhatsApp
+[OK] Dinheiro
+[OK] Telefone com e sem 55
+[OK] 55 não é duplicado
+[OBS] Pagamentos e confirmação automática foram testados com backend simulado; nenhuma cobrança real foi feita.
+
+RESULTADO: TODAS AS VERIFICAÇÕES AUTOMATIZADAS PASSARAM.

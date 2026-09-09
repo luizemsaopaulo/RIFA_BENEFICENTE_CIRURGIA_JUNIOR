@@ -1,0 +1,4 @@
+project_id = "qzpezwscmwfznzzbrxpb"
+
+[functions.junior-infinitepay-gateway]
+verify_jwt = false

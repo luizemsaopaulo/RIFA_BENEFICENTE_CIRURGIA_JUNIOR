@@ -1,0 +1,22 @@
+DADOS PENDENTES — RIFA DO JÚNIOR
+================================
+
+Já definido:
+- finalidade: cirurgia do Júnior
+- meta: R$ 10.000,00
+- valor por número: R$ 10,00
+- quantidade: CONFIGURÁVEL PELO ADMIN (não fixa)
+- login Admin: junior@gmail.com
+- InfinitePay: $antonio-junior-zzc
+- Edge Function: junior-infinitepay-gateway
+
+Ainda precisa definir:
+- senha do Admin;
+- PIN de 4 dígitos;
+- prêmio;
+- data/horário do sorteio;
+- Instagram;
+- WhatsApp do organizador;
+- chave Pix pessoal;
+- nome do favorecido Pix;
+- foto do Júnior.

@@ -1,0 +1,66 @@
+RIFA BENEFICENTE — CIRURGIA DO JÚNIOR — QUANTIDADE CONFIGURÁVEL
+================================================================
+
+OBJETIVO
+Projeto independente para ajudar o Júnior com a cirurgia. Usa o MESMO projeto Supabase das outras rifas, mas somente objetos junior_.
+
+QUANTIDADE CONFIGURÁVEL
+A quantidade NÃO é fixa em 1.000. O Admin possui a seção “Quantidade total de números”.
+- 100 números -> 001 a 100
+- 300 números -> 001 a 300
+- 1.000 números -> 0001 a 1000
+- outras quantidades positivas também são aceitas.
+
+A quantidade oficial fica em public.junior_raffle_public_state.total_numbers.
+Ao aumentar, o Supabase cria automaticamente os números adicionais.
+Ao reduzir, a operação é bloqueada se existir número pendente ou pago acima do novo limite.
+Reservas/vendas nunca são apagadas automaticamente.
+
+VALORES
+- Valor por número: R$ 10,00 (public.junior_raffle_public_state.unit_price_cents = 1000).
+- Meta da cirurgia: R$ 10.000,00 (goal_cents = 1000000).
+- A arrecadação máxima é calculada como quantidade × valor por número.
+
+INFINITEPAY DO JÚNIOR
+Handle configurado: $antonio-junior-zzc
+Handle técnico usado pela API: antonio-junior-zzc
+Edge Function separada: junior-infinitepay-gateway
+A função das outras rifas não é alterada.
+
+PAGAMENTOS
+1. InfinitePay — checkout automático (Pix/cartão quando disponibilizado pela InfinitePay).
+2. Pix pessoal — manual; botão “📋 Copiar Pix e enviar no WhatsApp”; permanece Pendente até o Admin confirmar.
+3. Dinheiro — informa quem recebeu + telefone; permanece Pendente até confirmação.
+
+PIX PESSOAL
+Ainda faltam a chave Pix, favorecido e WhatsApp do organizador. Não foram inventados.
+Configure nos secrets da Edge Function:
+- JUNIOR_PERSONAL_PIX_KEY
+- JUNIOR_PERSONAL_PIX_OWNER
+E em js/config.js para exibição/WhatsApp do organizador.
+
+ADMIN
+Login: junior@gmail.com
+Defina a senha e PIN em supabase/JUNIOR_CONFIGURAR_ADMIN.sql.
+A alteração da quantidade exige PIN.
+
+SUPABASE — INSTALAÇÃO NOVA
+1. Execute supabase/JUNIOR_INSTALAR_SUPABASE.sql.
+2. Configure senha/PIN em JUNIOR_CONFIGURAR_ADMIN.sql e execute.
+3. Publique a Edge Function junior-infinitepay-gateway com Verify JWT OFF.
+4. Configure Pix pessoal quando tiver os dados.
+
+SUPABASE — SE A RIFA DO JÚNIOR JÁ ESTIVER INSTALADA
+Execute somente:
+  supabase/JUNIOR_ATUALIZAR_QUANTIDADE_CONFIGURAVEL.sql
+Depois publique a nova Edge Function.
+
+PÁGINAS
+- index.html = público
+- admin.html = Admin completo
+- rapido.html = Painel Rápido PWA
+
+SEGURANÇA
+- service_role nunca fica no frontend.
+- dados de outras rifas não são apagados/renomeados.
+- sorteio oficial usa somente números pagos e dentro da quantidade atual.

@@ -1,0 +1,48 @@
+RIFA DO JÚNIOR — CORREÇÃO DO SUPABASE
+======================================
+
+PROJETO SUPABASE CORRETO
+https://rvwrljdjdogbcukxgguw.supabase.co
+
+PUBLISHABLE KEY
+sb_publishable_J1xXm79kjDKxDeHfGBW2Xw_dSqAcr6-
+
+ADMIN
+E-mail: junior@gmail.com
+Senha: 123456
+UUID Supabase Auth: 2056972b-35bc-4b4a-9f8e-7cb883ed5bed
+
+O problema da versão anterior era que js/config.js apontava para outro projeto Supabase.
+Esta versão aponta para o MESMO projeto Supabase usado pela Rifa Bruna/Juliana.
+
+ORDEM PARA INSTALAR
+
+1. Entre no projeto Rifa_Bruna no Supabase.
+2. SQL Editor > New query.
+3. Execute TODO o arquivo:
+   supabase/JUNIOR_INSTALAR_SUPABASE.sql
+
+Esse arquivo:
+- cria somente objetos junior_;
+- não apaga nem altera tabelas da Bruna/Juliana;
+- instala os números, reservas, doações, Admin, quantidade configurável e sorteio;
+- já configura o login junior@gmail.com / 123456;
+- vincula o UUID 2056972b-35bc-4b4a-9f8e-7cb883ed5bed ao cadastro do Admin.
+
+4. Depois falta somente escolher o PIN de 4 dígitos.
+   Abra:
+   supabase/JUNIOR_CONFIGURAR_PIN.sql
+   troque COLOQUE_O_PIN_AQUI pelos 4 dígitos e execute.
+
+5. Publique a Edge Function:
+   junior-infinitepay-gateway
+
+6. Publique os arquivos no GitHub Pages.
+
+IMPORTANTE
+O UUID do Supabase Auth foi registrado no cadastro administrativo, mas o painel atual
+continua usando o login administrativo próprio da rifa (e-mail + senha), preservando
+o funcionamento já depurado. O UUID serve para vincular claramente esse Admin ao
+usuário que você criou no Authentication.
+
+NÃO use service_role no navegador.

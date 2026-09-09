@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#781b38">
+  <meta name="description" content="Rifa beneficente para ajudar o Júnior, que enfrenta hérnia de disco, dores constantes e precisa de cirurgia. Cada número custa R$ 10,00.">
+  <title>Rifa Beneficente • Cirurgia do Júnior</title>
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__overlay"></div>
+    <div class="shell hero__content">
+      <div class="hero__copy">
+        <span class="pill">RIFA BENEFICENTE</span>
+        <h1>Ajude o Júnior em sua cirurgia</h1>
+        <p>O Júnior está enfrentando uma <strong>hérnia de disco</strong> e tem convivido com <strong>dores constantes e intensas</strong>. Ele precisa passar por uma cirurgia com custo aproximado de <strong id="heroGoal">R$ 10.000,00</strong>. Esta rifa foi criada para ajudar com esse custo. Cada participação faz diferença.</p>
+        <div class="facts">
+          <div class="fact"><span>Cada número</span><strong id="unitPriceFact">R$ 10,00</strong></div>
+          <div class="fact"><span>Meta</span><strong id="goalFact">R$ 10.000,00</strong></div>
+          <div class="fact"><span>Total de números</span><strong id="totalNumbersFact">—</strong></div>
+          <div class="fact"><span>Prêmio</span><strong id="prizeText">A definir</strong></div>
+        </div>
+        <div class="raffle-range-banner">
+          <strong id="raffleCountAnnouncement">🎟️ Carregando quantidade da rifa…</strong>
+          <span id="raffleRangeAnnouncement">A faixa de números será carregada do sistema.</span>
+          <small id="potentialAnnouncement">Arrecadação máxima da rifa: —</small>
+        </div>
+      </div>
+      <div class="hero__photo-card">
+        <img id="beneficiaryPhoto" src="assets/junior-foto-placeholder.svg" alt="Espaço reservado para a foto do Júnior">
+        <strong>Júnior</strong>
+        <span>Ação para ajudar nos custos da cirurgia</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell main-stack">
+    <section id="winnerPublic" class="card winner-card hidden">
+      <span>🎉 NÚMERO SORTEADO</span><strong id="winnerPublicNumber">—</strong><small>Resultado oficial registrado no sistema.</small>
+    </section>
+
+    <section class="card story-card" aria-labelledby="juniorStoryTitle">
+      <div class="section-title">
+        <div><span class="eyebrow">A HISTÓRIA DO JÚNIOR</span><h2 id="juniorStoryTitle">Por que estamos fazendo esta rifa?</h2></div>
+      </div>
+      <div class="story-layout">
+        <div class="story-copy">
+          <p>O Júnior está passando por um momento difícil de saúde. Ele está com <strong>hérnia de disco</strong> e vem sofrendo com <strong>dor constante e intensa</strong>.</p>
+          <p>Por causa desse quadro, ele precisa realizar uma cirurgia com custo aproximado de <strong>R$ 10.000,00</strong>. A rifa beneficente foi criada para ajudar a tornar esse tratamento possível. Cada número comprado contribui diretamente para essa arrecadação.</p>
+          <p class="story-emphasis">Se você puder participar, compartilhar ou divulgar esta rifa, já estará ajudando o Júnior.</p>
+        </div>
+        <aside class="health-info" aria-label="Informação sobre hérnia de disco">
+          <span class="health-info__icon">🩺</span>
+          <div>
+            <strong>Entenda a hérnia de disco</strong>
+            <p>A hérnia de disco pode causar dor quando há inflamação ou pressão sobre uma raiz nervosa. Os sintomas variam conforme a região afetada.</p>
+            <a class="button button--soft health-link" href="https://www.einstein.br/n/glossario-de-saude/hernia-de-disco" target="_blank" rel="noopener noreferrer">Saiba mais • Hospital Albert Einstein ↗</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="card campaign-card">
+      <div class="section-title"><div><span class="eyebrow">COMO AJUDAR</span><h2>Escolha seus números</h2></div><div id="connectionBadge" class="connection-badge">Conectando…</div></div>
+      <p>Selecione quantos números quiser. Somente números com pagamento confirmado participam do sorteio.</p>
+      <div class="mini-stats"><div><span>Disponíveis</span><strong id="availableCount">—</strong></div><div><span>Pagos</span><strong id="paidCount">—</strong></div><div><span>Pendentes</span><strong id="pendingCount">—</strong></div></div>
+      <div class="numbers-progress"><div id="progressBar"></div></div><small id="progressText" class="muted">Carregando andamento…</small>
+      <div class="number-tools"><label>Ir para o número<div class="number-jump"><input id="numberJump" inputmode="numeric" placeholder="Ex.: 150"><button id="jumpBtn" type="button">Ir</button></div></label></div>
+      <div id="setupWarning" class="notice notice--danger hidden">O banco desta rifa ainda não foi instalado/atualizado. Execute o SQL do projeto no Supabase.</div>
+      <div id="loadingNumbers" class="loading-box">Carregando números da rifa…</div><div id="numberGrid" class="number-grid hidden"></div>
+    </section>
+
+    <section class="card selection-card sticky-selection"><div><span>Seus números</span><strong id="selectedNumbersMain">Nenhum</strong></div><div class="selection-total"><span>Total</span><strong id="selectedTotalMain">R$ 0,00</strong></div><div class="selection-actions"><button id="clearSelectionBtn" class="button button--soft" type="button">Limpar</button><button id="openCheckoutBtn" class="button button--primary" type="button" disabled>Continuar</button></div></section>
+
+    <section class="card info-card"><div class="section-title"><div><span class="eyebrow">CAMPANHA</span><h2>Informações</h2></div></div><dl class="info-list">
+      <div><dt>Finalidade</dt><dd>Ajuda nos custos da cirurgia do Júnior por hérnia de disco</dd></div>
+      <div><dt>Meta da cirurgia</dt><dd id="goalInfo">R$ 10.000,00</dd></div>
+      <div><dt>Valor por número</dt><dd id="unitPriceInfo">R$ 10,00</dd></div>
+      <div><dt>Quantidade desta rifa</dt><dd id="totalNumbersInfo">—</dd></div>
+      <div><dt>Faixa</dt><dd id="numberRangeInfo">—</dd></div>
+      <div><dt>Arrecadação máxima com números</dt><dd id="potentialInfo">—</dd></div>
+      <div><dt>Pagamento</dt><dd>InfinitePay, Pix pessoal ou dinheiro</dd></div>
+      <div><dt>InfinitePay</dt><dd>$antonio-junior-zzc</dd></div>
+      <div><dt>Prêmio</dt><dd id="prizeInfo">A definir</dd></div>
+      <div><dt>Sorteio</dt><dd id="drawInfo">A definir</dd></div>
+    </dl><div id="instagramInfo" class="notice hidden"></div></section>
+
+    <section id="paymentStatusCard" class="card payment-status-card hidden"><h2 id="paymentStatusTitle">Pagamento</h2><p id="paymentStatusText"></p><div class="button-row"><button id="continuePaymentBtn" class="button button--primary hidden" type="button">Continuar pagamento</button><a id="receiptLink" class="button button--soft hidden" target="_blank" rel="noopener">Abrir comprovante</a></div></section>
+
+    <section id="personalPixPanel" class="card personal-pix-panel hidden" aria-live="polite"><span class="eyebrow">PIX PESSOAL</span><h2>Finalize o pagamento pelo Pix</h2><div class="pix-details"><div><span>Chave Pix</span><strong id="personalPixKey">—</strong></div><div><span>Favorecido</span><strong id="personalPixOwner">—</strong></div><div><span>Valor</span><strong id="personalPixAmount">R$ 0,00</strong></div><div><span>Números</span><strong id="personalPixNumbers">—</strong></div></div><button id="copySendWhatsappBtn" class="button button--whatsapp button--large" type="button">📋 Copiar Pix e enviar no WhatsApp</button><p class="muted">O botão copia a chave Pix e abre o WhatsApp com os dados do pedido. Os números continuam pendentes até a confirmação do administrador.</p></section>
+  </main>
+
+  <div id="checkoutModal" class="modal hidden" aria-hidden="true"><div class="modal__backdrop"></div><div class="modal__dialog"><button id="checkoutCloseBtn" class="modal__close" type="button">×</button><span class="eyebrow">FINALIZAR ESCOLHA</span><h2>Seus dados</h2><div class="checkout-summary"><div><span>Números</span><strong id="selectedNumbers">—</strong></div><div><span>Total</span><strong id="selectedTotal">R$ 0,00</strong></div></div><form id="purchaseForm"><label>Nome completo<input id="nameInput" maxlength="80" autocomplete="name" required></label><label>WhatsApp com DDD<input id="phoneInput" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999" required></label><fieldset class="payment-methods"><legend>Forma de pagamento</legend><label id="methodInfiniteCard" class="payment-method payment-method--active"><input type="radio" name="paymentMethod" value="infinitepay" checked><span><strong>InfinitePay</strong><small>Pix ou cartão no checkout do Júnior.</small></span></label><label id="methodPersonalCard" class="payment-method"><input type="radio" name="paymentMethod" value="personal_pix"><span><strong>Pix pessoal</strong><small>Pagamento manual, confirmado pelo administrador.</small></span></label><label id="methodCashCard" class="payment-method"><input type="radio" name="paymentMethod" value="cash"><span><strong>Dinheiro</strong><small>Informe quem recebeu o valor.</small></span></label></fieldset><div id="cashPaymentFields" class="cash-fields hidden"><label>Quem recebeu o dinheiro<input id="cashReceivedByInput" maxlength="80"></label><label>Telefone de quem recebeu<input id="cashReceivedPhoneInput" inputmode="tel" placeholder="(11) 99999-9999"></label></div><p id="paymentHelp" class="muted"></p><button id="purchaseButton" class="button button--primary button--large" type="submit">Continuar • R$ 0,00</button></form></div></div>
+  <div id="cancelChoiceModal" class="modal hidden" aria-hidden="true"><div class="modal__backdrop"></div><div class="modal__dialog modal__dialog--small"><h2>Cancelar esta escolha?</h2><p>Os números selecionados nesta tela serão desmarcados.</p><div class="button-row"><button id="keepCheckoutBtn" class="button button--soft" type="button">Continuar escolhendo</button><button id="confirmCancelCheckoutBtn" class="button button--danger" type="button">Cancelar escolha</button></div></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="js/config.js?v=2"></script><script src="js/app.js?v=2"></script>
+</body></html>

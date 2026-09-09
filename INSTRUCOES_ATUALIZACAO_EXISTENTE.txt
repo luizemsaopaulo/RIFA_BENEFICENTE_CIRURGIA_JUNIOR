@@ -1,0 +1,49 @@
+ATUALIZAÇÃO DA RIFA DO JÚNIOR — QUANTIDADE CONFIGURÁVEL
+================================================================
+
+SE A PRIMEIRA VERSÃO DA RIFA DO JÚNIOR JÁ ESTIVER NO SUPABASE
+
+1. Abra o SQL Editor do MESMO projeto Supabase.
+2. Execute SOMENTE:
+   supabase/JUNIOR_ATUALIZAR_QUANTIDADE_CONFIGURAVEL.sql
+
+Esse SQL mantém os dados existentes da rifa do Júnior e:
+- não toca nas tabelas das outras rifas;
+- remove o antigo limite fixo de quantidade;
+- cria/atualiza a função segura de alteração da quantidade;
+- ao aumentar, cria somente os números adicionais;
+- ao reduzir, bloqueia se houver número Pendente/Pago acima do novo limite;
+- não apaga reservas/vendas automaticamente;
+- mantém o sorteio apenas entre números Pagos da faixa atual.
+
+3. Publique a Edge Function:
+   junior-infinitepay-gateway
+
+InfinitePay do Júnior:
+   handle técnico: antonio-junior-zzc
+   exibição: $antonio-junior-zzc
+
+4. Publique o site atualizado no GitHub Pages.
+5. Faça Ctrl+F5. Se o Admin/Painel Rápido estiver instalado como PWA, feche e abra novamente.
+
+SE FOR INSTALAÇÃO NOVA
+
+1. Execute supabase/JUNIOR_INSTALAR_SUPABASE.sql
+2. Edite e execute supabase/JUNIOR_CONFIGURAR_ADMIN.sql
+3. Publique supabase/functions/junior-infinitepay-gateway/index.ts
+
+LOGIN DO ADMIN
+E-mail: junior@gmail.com
+Senha e PIN: ainda precisam ser definidos por você no SQL.
+
+DADOS AINDA PENDENTES
+- chave Pix;
+- favorecido Pix;
+- WhatsApp do organizador;
+- prêmio;
+- data/horário do sorteio;
+- Instagram;
+- foto do Júnior.
+
+Os testes de pagamento foram simulados. Nenhuma cobrança real foi criada
+e nenhum dado do Supabase real foi alterado durante a depuração.
