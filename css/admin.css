@@ -3,3 +3,17 @@
 
 /* v2 quantidade configurável */
 .quantity-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end;margin-top:12px}.quantity-form label{display:grid;gap:6px;font-weight:800}.quantity-form input{min-height:46px;border:1px solid #d7dae0;border-radius:12px;padding:10px 12px}.quantity-preview{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.quantity-preview>div{padding:12px;border-radius:12px;background:#f7f8fa;display:grid;gap:4px}.quantity-preview span{font-size:.75rem;color:#667085}.quantity-preview strong{font-size:1.05rem}@media(max-width:620px){.quantity-form{grid-template-columns:1fr}.quantity-preview{grid-template-columns:1fr}}
+
+
+/* Foto do Júnior gerenciada pelo Admin */
+.photo-admin-layout{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:20px;align-items:start;margin-top:16px}
+.photo-admin-preview,.photo-new-preview{display:grid;gap:8px}.photo-admin-preview>span,.photo-new-preview>span{font-size:.72rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.photo-admin-preview img,.photo-new-preview img{display:block;width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:17px;border:1px solid var(--line);background:#f8f8f9}
+.photo-admin-preview small,.photo-new-preview small{color:var(--muted);line-height:1.4}
+.photo-admin-controls{display:grid;gap:10px}.photo-file-input{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;clip-path:inset(50%)!important}
+.photo-file-label{display:inline-flex;align-items:center;justify-content:center;justify-self:start;min-height:44px;padding:10px 15px;border-radius:11px;background:#f0f1f3;color:#30343b;font-weight:900;cursor:pointer}
+.photo-file-label:focus-within,.photo-file-label:hover{background:#e4e6e9}.photo-admin-actions{display:flex;gap:8px;flex-wrap:wrap}.photo-admin-actions .button{min-width:150px}
+.photo-progress{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:11px;background:#f7f8fa;color:#30343b}.photo-spinner{width:18px;height:18px;border:2px solid #d1d5db;border-top-color:var(--wine);border-radius:50%;animation:photo-spin .8s linear infinite}
+.photo-message{margin:0}.photo-message--success{color:var(--green);font-weight:800}.photo-message--error{color:var(--red);font-weight:800}.photo-message--warning{color:var(--orange);font-weight:800}
+@keyframes photo-spin{to{transform:rotate(360deg)}}
+@media(max-width:720px){.photo-admin-layout{grid-template-columns:1fr}.photo-admin-preview img,.photo-new-preview img{max-width:260px}.photo-admin-actions{display:grid;grid-template-columns:1fr}.photo-admin-actions .button,.photo-file-label{width:100%}}

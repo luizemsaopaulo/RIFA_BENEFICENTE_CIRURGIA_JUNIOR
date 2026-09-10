@@ -28,7 +28,17 @@ window.RIFA_CONFIG = {
   instagramHandle: "",
   instagramUrl: "",
   organizerWhatsapp: "",
+  // Fallback local. Quando o Admin salva uma foto, o caminho ativo vem do Supabase.
   beneficiaryPhoto: "assets/junior-foto-placeholder.svg",
+
+  // Foto pública do Júnior: upload/remoção somente pela Edge Function autenticada
+  // com a sessão administrativa própria desta rifa.
+  adminMedia: {
+    bucket: "junior-public-media",
+    gatewayUrl: "https://rvwrljdjdogbcukxgguw.supabase.co/functions/v1/junior-admin-media",
+    maxFileBytes: 8388608,
+    allowedMimeTypes: ["image/jpeg", "image/png", "image/webp"]
+  },
 
   // Handle público da conta InfinitePay do Júnior. O símbolo $ é apenas visual.
   infinitePay: {

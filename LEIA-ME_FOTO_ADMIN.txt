@@ -1,0 +1,25 @@
+FOTO DO JÚNIOR PELO PAINEL ADM — ATUALIZAÇÃO 20260910-foto-admin-1
+
+ORDEM PARA ATIVAR NO SUPABASE
+1. SQL Editor > New query > cole/executar: supabase/JUNIOR_ATUALIZAR_FOTO_ADMIN.sql
+2. Edge Functions > Deploy a new function > nome: junior-admin-media
+3. Cole o conteúdo de: supabase/functions/junior-admin-media/index.ts
+4. Deixe Verify JWT DESATIVADO, porque esta função valida a sessão própria do Admin.
+5. Publique os arquivos do site no GitHub Pages.
+
+SECRETS
+- Não é necessário criar secret novo para esta função.
+- Ela usa SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY no servidor/Edge Function.
+- A service role NÃO aparece em config.js, admin.js ou index.html.
+
+COMO USAR
+Admin > seção “📷 Foto do Júnior” > Escolher foto > confira a prévia > Salvar nova foto.
+A remoção pede confirmação com o PIN administrativo e devolve o site ao placeholder.
+
+CACHE
+Cada upload recebe um caminho físico exclusivo, por exemplo:
+beneficiary/junior-20260910123045-a1b2c3d4e5f6.jpg
+Assim a troca não depende de sobrescrever a mesma URL.
+
+WHATSAPP
+A og:image existente foi preservada. Esta função altera somente a foto do Júnior DENTRO do site.

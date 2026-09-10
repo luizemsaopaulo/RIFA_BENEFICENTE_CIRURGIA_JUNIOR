@@ -1,4 +1,7 @@
-project_id = "qzpezwscmwfznzzbrxpb"
+project_id = "rvwrljdjdogbcukxgguw"
 
 [functions.junior-infinitepay-gateway]
+verify_jwt = false
+
+[functions.junior-admin-media]
 verify_jwt = false

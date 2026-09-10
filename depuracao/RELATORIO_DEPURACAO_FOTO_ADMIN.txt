@@ -1,0 +1,42 @@
+DEPURAÇÃO CHROMIUM — FOTO DO JÚNIOR PELO ADM
+================================================================
+
+[OK] login_admin
+[OK] secao_foto_visivel
+[OK] estado_placeholder_inicial
+[OK] remover_desabilitado_sem_foto
+[OK] arquivo_invalido_bloqueado
+[OK] salvar_desabilitado_invalido
+[OK] arquivo_maior_8mb_bloqueado
+[OK] previa_nova_foto_visivel
+[OK] salvar_habilitado
+[OK] upload_multipart_recebe_file — {'mediaPath': 'beneficiary/junior-20260910123456-test123.png', 'uploadSeen': True, 'uploadSize': 1921012, 'uploadType': 'image/png', 'removeSeen': False, 'statusCalls': 1}
+[OK] nome_fisico_versionado
+[OK] remover_habilitado
+[OK] texto_confirmacao_remocao
+[OK] remove_enviado_edge
+[OK] volta_placeholder
+[OK] admin_mobile_sem_overflow
+[OK] sem_erros_admin_js
+[OK] publico_le_beneficiary_photo_path
+[OK] publico_passa_path_ao_storage
+[OK] foto_publica_carregada
+[OK] premio_200_preservado
+[OK] public_mobile_sem_overflow
+[OK] sem_erros_public_js
+[OK] compatibilidade_antes_sql
+[OK] compatibilidade_usa_placeholder
+[OK] compatibilidade_sem_pageerror
+
+ESCOPO DO TESTE
+- Chromium real/headless, desktop 1366x900 e mobile 390x844.
+- Código real de admin.js/app.js executado no Chromium. O backend foi substituído por um stub controlado porque o SQL/Edge novos ainda não foram publicados no Supabase real.
+- Testado: login, seção da foto, arquivo inválido, arquivo >8 MB, prévia, confirmação por PIN, envio multipart/form-data com File real, atualização visual, remoção e retorno ao placeholder.
+- Página pública testada lendo beneficiary_photo_path e repassando o caminho ao Supabase Storage.
+- Compatibilidade testada para antes do SQL: erro de coluna ausente aciona nova consulta sem o campo e mantém o site funcionando.
+- Layout verificado em celular e desktop, sem overflow horizontal e sem erros JS de página.
+
+LIMITAÇÃO IMPORTANTE
+- O novo SQL e a Edge Function junior-admin-media NÃO foram publicados no Supabase real nesta execução. Fazer isso mudaria seu projeto externo. Por isso o upload/remoção contra o Storage REAL não foi executado.
+- A Edge Function foi revisada estaticamente: valida a sessão por RPC liberada somente a service_role, valida tamanho e assinatura real de JPG/PNG/WEBP, usa nome único, atualiza o caminho ativo e só depois tenta limpar o arquivo anterior.
+- Nenhum pagamento, reserva, número ou dado real da rifa foi alterado durante os testes.

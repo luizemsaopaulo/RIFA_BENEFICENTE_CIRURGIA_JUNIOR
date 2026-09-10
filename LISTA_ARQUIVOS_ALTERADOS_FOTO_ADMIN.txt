@@ -1,0 +1,28 @@
+ATUALIZAÇÃO — FOTO DO JÚNIOR PELO PAINEL ADM
+
+ARQUIVOS EXISTENTES ALTERADOS
+- admin.html — nova seção “📷 Foto do Júnior” e versionamento dos assets do Admin.
+- css/admin.css — layout responsivo, prévias, botões, progresso e mensagens da área da foto.
+- js/admin.js — seleção, validação, prévia, upload, consulta e remoção via Edge Function com sessão própria do Admin.
+- js/app.js — página pública lê beneficiary_photo_path e usa a foto do Supabase; fallback compatível para placeholder.
+- js/config.js — configuração do bucket/Edge Function/limite/tipos aceitos.
+- index.html — somente versionamento dos JS/CSS para carregar a atualização; og:image foi preservada.
+- admin-sw.js — cache do PWA do Admin atualizado para v3.
+- supabase/config.toml — project_id corrigido para rvwrljdjdogbcukxgguw e registro da nova Edge Function com verify_jwt=false.
+- SHA256_PROJETO.txt — regenerado após a atualização.
+
+ARQUIVOS NOVOS
+- supabase/JUNIOR_ATUALIZAR_FOTO_ADMIN.sql — ÚNICO SQL novo desta função.
+- supabase/functions/junior-admin-media/index.ts — Edge Function da foto.
+- DEPLOY_EDGE_JUNIOR_ADMIN_MEDIA.bat — deploy opcional via CLI.
+- LEIA-ME_FOTO_ADMIN.txt — ordem curta de instalação e uso.
+- depuracao/RELATORIO_DEPURACAO_FOTO_ADMIN.txt — resultados dos testes.
+- depuracao/junior_admin_foto_desktop.png
+- depuracao/junior_admin_foto_mobile.png
+- depuracao/junior_public_foto_desktop.png
+- depuracao/junior_public_foto_mobile.png
+
+PRESERVADO
+- Supabase das demais rifas.
+- reservas, números, preço, prêmio R$ 200 no Pix, meta, InfinitePay, Pix pessoal, dinheiro, sorteio, doações, login, PIN e Painel Rápido.
+- imagem Open Graph/WhatsApp: assets/rifa-junior-compartilhar-v20260909-2.png
