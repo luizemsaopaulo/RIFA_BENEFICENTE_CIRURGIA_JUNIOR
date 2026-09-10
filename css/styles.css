@@ -8,3 +8,9 @@
 /* História do Júnior */
 .story-card{overflow:hidden}.story-layout{display:grid;grid-template-columns:1.35fr .85fr;gap:18px;align-items:start;margin-top:10px}.story-copy p{margin:0 0 12px;line-height:1.7}.story-copy p:last-child{margin-bottom:0}.story-emphasis{padding:12px 14px;border-left:4px solid var(--wine);border-radius:0 12px 12px 0;background:#fff5f8;font-weight:750}.health-info{display:flex;gap:12px;padding:16px;border:1px solid #eadde2;border-radius:17px;background:linear-gradient(145deg,#fff8fa,#faf7f8)}.health-info__icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border-radius:13px;background:#fff;font-size:1.35rem;box-shadow:0 6px 16px rgba(47,22,31,.07)}.health-info strong{display:block;margin-bottom:6px}.health-info p{margin:0 0 12px;color:var(--muted);font-size:.84rem;line-height:1.55}.health-link{width:100%;text-align:center;font-size:.78rem}
 @media(max-width:760px){.story-layout{grid-template-columns:1fr}.health-info{align-items:flex-start}}
+
+
+/* Destaque oficial do prêmio + compartilhamento */
+.prize-highlight{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;padding:14px 16px;border:1px solid rgba(255,255,255,.34);border-radius:16px;background:linear-gradient(135deg,rgba(10,99,60,.94),rgba(18,140,91,.92));box-shadow:0 10px 28px rgba(0,0,0,.14)}
+.prize-highlight span{font-size:.74rem;font-weight:950;letter-spacing:.08em;color:#dff7e9}.prize-highlight strong{font-size:clamp(1.35rem,3vw,2rem);color:#fff;letter-spacing:-.02em}.prize-highlight small{width:100%;color:#e9fff1;font-size:.78rem}.hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.share-whatsapp-button{min-height:48px;padding-inline:18px;box-shadow:0 8px 22px rgba(0,0,0,.15)}
+@media(max-width:720px){.prize-highlight{align-items:flex-start}.prize-highlight strong{width:100%}.share-whatsapp-button{width:100%}}

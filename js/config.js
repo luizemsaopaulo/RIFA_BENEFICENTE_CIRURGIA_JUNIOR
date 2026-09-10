@@ -10,8 +10,17 @@ window.RIFA_CONFIG = {
   fallbackUnitPriceCents: 1000,
   fallbackGoalCents: 1000000,
 
-  // DADOS A DEFINIR — preencha quando decidir.
-  prizeText: "A definir",
+  // Prêmio oficial da rifa. Valor em centavos para manter o padrão financeiro do projeto.
+  prizeValue: 20000,
+  prizeText: "R$ 200 no Pix",
+
+  // Endereço público oficial e metadados de compartilhamento.
+  publicUrl: "https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/",
+  share: {
+    title: "Rifa Beneficente • Ajude o Júnior",
+    description: "Participe da rifa beneficente do Júnior. Número por R$ 10,00 e prêmio de R$ 200 no Pix. Sua participação ajuda nos custos da cirurgia.",
+    imageUrl: "https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/assets/rifa-junior-compartilhar.png"
+  },
   drawAt: "",
   drawDateText: "A definir",
   drawTimeText: "A definir",

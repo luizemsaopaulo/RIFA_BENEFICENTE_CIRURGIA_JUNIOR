@@ -1,0 +1,60 @@
+RELATÓRIO — RIFA DO JÚNIOR — WHATSAPP + PRÊMIO R$ 200 NO PIX
+========================================================================
+
+ARQUIVOS ALTERADOS
+- index.html
+- js/config.js
+- js/app.js
+- css/styles.css
+- assets/rifa-junior-compartilhar.png (novo)
+
+OPEN GRAPH / COMPARTILHAMENTO
+- og:url: https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/
+- og:image: https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/assets/rifa-junior-compartilhar.png
+- imagem: 1198 x 1313 px
+[OK] node_js/config.js
+[OK] node_js/app.js
+[OK] og_title
+[OK] og_description
+[OK] og_image_absolute
+[OK] og_url_absolute
+[OK] twitter_card
+[OK] twitter_image
+[OK] image_exists
+[OK] prize_config_value
+[OK] prize_config_text
+[OK] prize_visible_html
+[OK] share_button
+[OK] official_url_in_config
+[OK] no_file_share_path
+[OK] no_windows_share_path
+
+CHROMIUM — MOBILE 390x844 + DESKTOP 1366x900
+[OK] mobile_no_js_errors
+[OK] mobile_prize_visible
+[OK] mobile_share_visible
+[OK] share_opens_whatsapp
+[OK] share_has_prize
+[OK] share_has_unit_price
+[OK] share_has_story
+[OK] share_has_public_url
+[OK] desktop_no_js_errors
+[OK] desktop_prize_visible
+[OK] desktop_share_visible
+
+ARQUIVOS NÃO RELACIONADOS PRESERVADOS BYTE A BYTE
+[OK] admin.html
+[OK] rapido.html
+[OK] js/admin.js
+[OK] js/rapido.js
+[OK] css/admin.css
+[OK] css/rapido.css
+[OK] admin-sw.js
+[OK] rapido-sw.js
+[OK] supabase/JUNIOR_INSTALAR_SUPABASE.sql
+[OK] supabase/functions/junior-infinitepay-gateway/index.ts
+
+OBSERVAÇÃO
+A prévia do WhatsApp é gerada pelos metadados Open Graph da página publicada.
+O WhatsApp pode manter em cache uma prévia anterior por algum tempo após a publicação.
+Nenhum Supabase, SQL, Admin, PIN, login, InfinitePay, Pix, Dinheiro, sorteio ou Painel Rápido foi alterado.

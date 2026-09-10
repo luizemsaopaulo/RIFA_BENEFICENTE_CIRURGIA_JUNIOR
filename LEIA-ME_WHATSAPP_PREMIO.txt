@@ -1,0 +1,12 @@
+ATUALIZAÇÃO — PRÊMIO + PRÉVIA DO WHATSAPP
+
+Prêmio: R$ 200 no Pix
+Número: R$ 10,00
+URL pública: https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/
+Imagem Open Graph: https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/assets/rifa-junior-compartilhar.png
+
+A imagem de compartilhamento fica em:
+assets/rifa-junior-compartilhar.png
+
+O WhatsApp pode manter uma prévia antiga em cache por algum tempo.
+A página já contém os metadados Open Graph estáticos necessários.
