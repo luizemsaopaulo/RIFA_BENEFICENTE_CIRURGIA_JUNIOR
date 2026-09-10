@@ -17,9 +17,10 @@ window.RIFA_CONFIG = {
   // Endereço público oficial e metadados de compartilhamento.
   publicUrl: "https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/",
   share: {
+    url: "https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/?v=20260909-2",
     title: "Rifa Beneficente • Ajude o Júnior",
     description: "Participe da rifa beneficente do Júnior. Número por R$ 10,00 e prêmio de R$ 200 no Pix. Sua participação ajuda nos custos da cirurgia.",
-    imageUrl: "https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/assets/rifa-junior-compartilhar.png"
+    imageUrl: "https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/assets/rifa-junior-compartilhar-v20260909-2.png"
   },
   drawAt: "",
   drawDateText: "A definir",

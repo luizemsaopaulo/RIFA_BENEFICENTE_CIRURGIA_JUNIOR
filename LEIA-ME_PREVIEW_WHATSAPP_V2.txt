@@ -1,0 +1,25 @@
+CORREÇÃO DE CACHE DA PRÉVIA DO WHATSAPP
+
+O WhatsApp pode guardar a imagem/título de um link em cache.
+
+Nesta versão foram alterados DOIS identificadores:
+
+LINK USADO NO COMPARTILHAMENTO:
+https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/?v=20260909-2
+
+NOVA IMAGEM OPEN GRAPH:
+https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/assets/rifa-junior-compartilhar-v20260909-2.png
+
+O endereço oficial da rifa continua:
+https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/
+
+O parâmetro ?v=20260909-2 NÃO cria outra rifa.
+Ele abre exatamente a mesma página, mas faz o WhatsApp enxergar uma URL nova
+e solicitar novamente os metadados Open Graph.
+
+IMPORTANTE:
+- Publique TODOS os arquivos desta versão no GitHub Pages.
+- Confirme que o arquivo assets/rifa-junior-compartilhar-v20260909-2.png subiu para o GitHub.
+- Use o botão "Compartilhar no WhatsApp" desta versão.
+- Se você colar manualmente o link antigo sem ?v=..., o WhatsApp ainda poderá
+  usar o cache antigo.
