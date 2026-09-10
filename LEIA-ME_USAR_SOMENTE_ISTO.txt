@@ -1,63 +1,20 @@
-RIFA DO JÚNIOR — PACOTE LIMPO PARA PUBLICAÇÃO
-==============================================
+RIFA DO JÚNIOR — PACOTE LIMPO V2
 
-Este pacote foi limpo para NÃO misturar arquivos antigos.
-Use somente os arquivos desta pasta.
+ESTE É O PACOTE ATUAL PARA PUBLICAÇÃO.
 
-SUPABASE
---------
-Execute somente:
+CORREÇÕES DESTA VERSÃO:
+1. Pedidos CANCELADOS não aparecem mais na lista principal do Admin.
+   - Eles NÃO são apagados do banco.
+   - Para consultar, escolha o filtro "Cancelados".
+2. Foto do Júnior:
+   - a chamada para junior-admin-media agora envia a publishable key no header "apikey";
+   - a sessão administrativa própria continua sendo validada pelo session_token;
+   - erro da foto não derruba o restante do painel.
+
+IMPORTANTE:
+- Para estas duas correções, basta publicar os arquivos atualizados no GitHub Pages.
+- NÃO execute novamente SQL antigo.
+- O projeto mantém somente um SQL oficial:
   supabase/JUNIOR_SQL_UNICO_OFICIAL.sql
-
-NÃO execute SQLs antigos de versões anteriores.
-
-EDGE FUNCTIONS
---------------
-Publique exatamente estas duas funções:
-
-1) junior-infinitepay-gateway
-   arquivo: supabase/functions/junior-infinitepay-gateway/index.ts
-
-2) junior-admin-media
-   arquivo: supabase/functions/junior-admin-media/index.ts
-
-Verify JWT: DESLIGADO nas duas.
-
-Secrets/variáveis:
-- SUPABASE_URL: fornecida pelo Supabase
-- SUPABASE_SERVICE_ROLE_KEY: fornecida pelo Supabase, somente servidor
-- JUNIOR_INFINITEPAY_HANDLE: opcional; fallback antonio-junior-zzc
-- JUNIOR_PERSONAL_PIX_KEY: somente se usar Pix pessoal
-- JUNIOR_PERSONAL_PIX_OWNER: somente se usar Pix pessoal
-
-GITHUB PAGES
-------------
-Publique os arquivos desta pasta no repositório:
-RIFA_BENEFICENTE_CIRURGIA_JUNIOR
-
-Depois abra o Admin e faça Ctrl+F5 uma vez.
-
-TESTE APÓS PUBLICAR
--------------------
-1. Admin: junior@gmail.com / 123456; aguarde 20 segundos e confirme que continua aberto.
-2. Dinheiro: reserve 1 número livre e confirme que fica pendente no Admin.
-3. Foto: envie uma foto pelo Admin e confirme que aparece na página pública.
-
-DADOS AINDA NÃO DEFINIDOS, SE QUISER USAR
------------------------------------------
-- data/horário do sorteio
-- Instagram
-- WhatsApp do organizador
-- chave Pix pessoal
-- nome do favorecido do Pix pessoal
-
-LINKS
------
-Rifa:
-https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/
-
-Admin:
-https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/admin.html
-
-Painel rápido:
-https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/rapido.html
+- Se a Edge Function da foto continuar retornando "Missing authorization header",
+  confirme no Supabase que junior-admin-media está publicada e com Verify JWT desligado.
