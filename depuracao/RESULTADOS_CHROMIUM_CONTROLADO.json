@@ -1,0 +1,92 @@
+[
+  {
+    "test": "public_grid_carregada",
+    "ok": true,
+    "detail": "buttons=150"
+  },
+  {
+    "test": "public_premio_200",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "cash_controlado_registra_pendente",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "cash_controlado_salva_recebedor",
+    "ok": true,
+    "detail": "{\"provider\": \"cash\", \"order_nsu\": \"JUNIOR-CONTROLLED-CASH\", \"numbers\": [4], \"amount_cents\": 1000, \"buyer_name\": \"Comprador Teste\", \"cash_received_by\": \"Júnior Recebedor\", \"cash_received_phone\": \"11988887777\"}"
+  },
+  {
+    "test": "public_sem_pageerror",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "public_mobile_grid",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "public_mobile_sem_pageerror",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "admin_login_painel_permanece_apos_media_401",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "admin_login_nao_volta_para_login",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "admin_token_preservado_apos_media_401",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "admin_media_401_fica_na_area_foto",
+    "ok": true,
+    "detail": "Sessão não validada pela função de foto no teste controlado. O painel continua conectado; verifique o SQL/Edge Function da foto."
+  },
+  {
+    "test": "admin_desktop_sem_pageerror",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "admin_mobile_painel_permanece",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "admin_mobile_sem_pageerror",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "rapido_login_render",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "rapido_confirm_badge_cash",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "test": "rapido_whatsapp_badge_pago_sem_aviso",
+    "ok": true,
+    "detail": "1"
+  },
+  {
+    "test": "rapido_sem_pageerror",
+    "ok": true,
+    "detail": ""
+  }
+]

@@ -1,22 +1,24 @@
-DADOS PENDENTES — RIFA DO JÚNIOR
-================================
+DADOS AINDA NÃO INFORMADOS — RIFA DO JÚNIOR
+=========================================
 
-Já definido:
-- finalidade: cirurgia do Júnior
+Já definido e preservado nesta base:
+- finalidade: ajudar nos custos da cirurgia do Júnior
 - meta: R$ 10.000,00
 - valor por número: R$ 10,00
-- quantidade: CONFIGURÁVEL PELO ADMIN (não fixa)
+- quantidade: configurável pelo Admin
+- prêmio: R$ 200 no Pix
 - login Admin: junior@gmail.com
+- senha Admin: configurada pelo SQL oficial
+- PIN das ações: preservado; em instalação sem PIN, inicia 6253
 - InfinitePay: $antonio-junior-zzc
-- Edge Function: junior-infinitepay-gateway
+- foto do Júnior: administrável pelo painel Admin
+- arte do WhatsApp: separada da foto do site
 
-Ainda precisa definir:
-- senha do Admin;
-- PIN de 4 dígitos;
-- prêmio;
-- data/horário do sorteio;
-- Instagram;
-- WhatsApp do organizador;
-- chave Pix pessoal;
-- nome do favorecido Pix;
-- foto do Júnior.
+Ainda depende de informação/configuração externa do organizador:
+- data/horário do sorteio
+- Instagram, caso deseje exibir
+- WhatsApp do organizador (necessário ao botão do Pix pessoal)
+- chave Pix pessoal
+- nome do favorecido do Pix pessoal
+
+Os itens acima não são inventados pelo projeto. InfinitePay e pagamento em dinheiro não dependem da chave Pix pessoal.

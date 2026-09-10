@@ -1,0 +1,31 @@
+PUBLICAÇÃO — ORDEM ÚNICA
+========================
+
+1) SUPABASE > SQL Editor
+Execute somente supabase/JUNIOR_SQL_UNICO_OFICIAL.sql.
+
+2) SUPABASE > Edge Functions
+Crie/republique exatamente:
+- junior-infinitepay-gateway -> supabase/functions/junior-infinitepay-gateway/index.ts
+- junior-admin-media -> supabase/functions/junior-admin-media/index.ts
+Verify JWT: DESLIGADO nas duas.
+
+Secrets / variáveis:
+- SUPABASE_URL: padrão do Supabase
+- SUPABASE_SERVICE_ROLE_KEY: padrão do Supabase, somente dentro das Edge Functions
+- JUNIOR_INFINITEPAY_HANDLE: opcional; se ausente, o código usa antonio-junior-zzc
+- JUNIOR_PERSONAL_PIX_KEY: obrigatório apenas se for usar Pix pessoal
+- JUNIOR_PERSONAL_PIX_OWNER: obrigatório apenas se for usar Pix pessoal
+
+3) GITHUB
+Publique todos os arquivos da pasta final no repositório da rifa.
+Depois abra o Admin e pressione Ctrl+F5 uma vez.
+
+4) TESTE ÚNICO APÓS PUBLICAR
+- Entre no Admin com junior@gmail.com / 123456 e aguarde 20 segundos: o painel deve permanecer aberto.
+- Na página pública, reserve UM número livre em Dinheiro, informe comprador/recebedor, confirme que aparece como pendente no Admin e depois libere o número de teste pelo Admin.
+- Na área Foto do Júnior, envie a foto e confirme que ela aparece na página pública.
+
+Links:
+Principal: https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/
+Admin: https://luizemsaopaulo.github.io/RIFA_BENEFICENTE_CIRURGIA_JUNIOR/admin.html

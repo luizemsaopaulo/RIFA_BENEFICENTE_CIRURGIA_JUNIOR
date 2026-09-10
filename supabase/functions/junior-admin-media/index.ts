@@ -44,7 +44,7 @@ async function validateSession(token: string) {
   });
   if (error) {
     console.error("session_validate", error);
-    throw new HttpError(500, "Validador da sessão não está instalado. Execute o SQL da foto do Admin.");
+    throw new HttpError(500, "Validador da sessão não está instalado. Execute JUNIOR_SQL_UNICO_OFICIAL.sql.");
   }
   if (data !== true) throw new HttpError(401, "Sessão administrativa inválida ou expirada.");
 }
@@ -55,7 +55,7 @@ async function currentPath(): Promise<string | null> {
     .select("beneficiary_photo_path")
     .eq("id", 1)
     .single();
-  if (error) throw new HttpError(500, "Campo da foto não está disponível. Execute o SQL de atualização.");
+  if (error) throw new HttpError(500, "Campo da foto não está disponível. Execute JUNIOR_SQL_UNICO_OFICIAL.sql.");
   return data?.beneficiary_photo_path || null;
 }
 
