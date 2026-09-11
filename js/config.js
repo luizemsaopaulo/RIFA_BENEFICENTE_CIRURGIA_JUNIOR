@@ -47,7 +47,7 @@ window.RIFA_CONFIG = {
     gatewayUrl: "https://rvwrljdjdogbcukxgguw.supabase.co/functions/v1/junior-infinitepay-gateway"
   },
   personalPix: {
-    key: "",
+    key: "88996579463",
     owner: ""
   },
   admin: {
